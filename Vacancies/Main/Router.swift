@@ -10,10 +10,10 @@ import UIKit
 class Router {
     static func navigateToMoreDetailsViewController(from viewController: UIViewController, with indexPath: IndexPath) {
         let detailsViewController = MoreDetailsViewController()
-        let detailsViewControllerPresenter = MoreDetailsViewControllerPresenter()
-        detailsViewControllerPresenter.indexPath = indexPath
-        detailsViewController.presenter = detailsViewControllerPresenter
-        detailsViewControllerPresenter.view = detailsViewController
+        let detailsViewModel = MoreDetailsViewControllerViewModel()
+        detailsViewModel.indexPath = indexPath
+        detailsViewModel.view = detailsViewController
         viewController.navigationController?.pushViewController(detailsViewController, animated: true)
+        detailsViewModel.positions = Storage.shared.positions
     }
 }

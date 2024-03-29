@@ -8,9 +8,11 @@
 import UIKit
 import Kingfisher
 
+protocol MoreDetailsViewControllerProtocol: AnyObject {
+    func displayPositionDetails(_ position: Position)
+}
+
 class MoreDetailsViewController: UIViewController, MoreDetailsViewControllerProtocol {
-    
-    var presenter: MoreDetailsViewControllerPresenter!
     
     private let scrollView = UIScrollView()
     private let contentView = UIView()
@@ -27,7 +29,6 @@ class MoreDetailsViewController: UIViewController, MoreDetailsViewControllerProt
         
         setupView()
         setUpConstraints()
-        presenter.setDetails()
     }
     
     private func setupView() {

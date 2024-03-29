@@ -9,19 +9,19 @@ import Kingfisher
 
 class ViewController: UIViewController {
     
-    let tableView = UITableView()
-    let titleLabel = UILabel()
-    var presenter: PositionPresenter!
+    private let tableView = UITableView()
+    private let titleLabel = UILabel()
+    
+    private var viewModel: MainViewModelProtocol?
+    private var positions: [MainPosition]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        presenter = PositionPresenter(view: self)
+        viewModel = MainViewModel(view: self)
         
         setUpView()
         setUpConstraint()
-        
-        presenter.viewDidLoad()
+        updateTableView()
     }
     
     func setUpView() {
@@ -55,24 +55,29 @@ class ViewController: UIViewController {
             titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 30)
         ])
     }
+    
+    func updateTableView() {
+        positions = viewModel?.positions
+        tableView.reloadData()
+    }
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return presenter.numberOfPositions
+        return positions?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MainCell", for: indexPath) as! TableViewCellMain
         
-        let position = presenter.position(at: indexPath.row)
+        let position = positions?[indexPath.row]
         
-        if let imageUrl = URL(string: position.image ?? "") {
+        if let imageUrl = URL(string: position?.image ?? "") {
             cell.jobImageView.kf.setImage(with: imageUrl)
         }
         
         cell.accessoryType = .disclosureIndicator
-        cell.configure(with: position.title, subtitle: position.salary)
+        cell.configure(with: position?.title ?? "", subtitle: position?.salary ?? "")
         cell.selectionStyle = .none
         
         return cell

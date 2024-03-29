@@ -8,9 +8,9 @@
 import UIKit
 
 final class LoadingScreenViewController: UIViewController {
-    let titleLabel = UILabel()
+    private let titleLabel = UILabel()
     
-    let storage = Storage.shared
+    private let storage = Storage.shared
     
     override func viewDidLoad() {
         self.view.backgroundColor = .systemYellow

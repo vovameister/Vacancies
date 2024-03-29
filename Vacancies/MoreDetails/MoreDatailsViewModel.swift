@@ -7,16 +7,15 @@
 
 import Foundation
 
-protocol MoreDetailsViewControllerProtocol: AnyObject {
-    func displayPositionDetails(_ position: Position)
-}
-class MoreDetailsViewControllerPresenter {
+class MoreDetailsViewControllerViewModel {
     weak var view: MoreDetailsViewControllerProtocol?
     private var storage = Storage.shared
     
     var indexPath: IndexPath?
     var positions: [Position]? {
-        return storage.positions
+        didSet {
+            setDetails()
+        }
     }
     
     
