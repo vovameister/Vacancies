@@ -8,11 +8,7 @@
 import UIKit
 import Kingfisher
 
-protocol MoreDetailsViewControllerProtocol: AnyObject {
-    func displayPositionDetails(_ position: Position)
-}
-
-class MoreDetailsViewController: UIViewController, MoreDetailsViewControllerProtocol {
+class MoreDetailsViewController: UIViewController {
     
     private let scrollView = UIScrollView()
     private let contentView = UIView()
@@ -24,11 +20,14 @@ class MoreDetailsViewController: UIViewController, MoreDetailsViewControllerProt
     private let companyDescriptionLabel = UILabel()
     private let shareButton = UIButton()
     
+    var viewModel: MoreDetailsViewControllerViewModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupView()
         setUpConstraints()
+        displayPositionDetails(viewModel!.position)
     }
     
     private func setupView() {

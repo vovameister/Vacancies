@@ -7,23 +7,17 @@
 import Foundation
 
 protocol MainViewModelProtocol {
-    var positions: [Position]? { get }
-    func routeToDetails(indexPath: IndexPath)
+    var positions: [Position] { get }
 }
 
 class MainViewModel: MainViewModelProtocol {
     private let storage = Storage.shared
-    private let router = Router()
     private weak var view: MainViewController?
     
-    var positions: [Position]?
+    var positions: [Position]
     
     init(view: MainViewController) {
         self.view = view
         self.positions = storage.positions
-    }
-    
-    func routeToDetails(indexPath: IndexPath) {
-        router.navigateToMoreDetailsViewController(position: storage.positions[indexPath.row])
     }
 }

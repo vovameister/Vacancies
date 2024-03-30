@@ -15,7 +15,6 @@
 		6F6DC7242BB0B15100BF20DE /* MoreDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6DC7232BB0B15100BF20DE /* MoreDetailsViewController.swift */; };
 		6F6DC7272BB0B36900BF20DE /* PositionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6DC7262BB0B36900BF20DE /* PositionModel.swift */; };
 		6F6DC72A2BB0B51B00BF20DE /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 6F6DC7292BB0B51B00BF20DE /* Kingfisher */; };
-		6F6DC72C2BB0B93600BF20DE /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6DC72B2BB0B93600BF20DE /* Router.swift */; };
 		6F6DC72E2BB0CA2A00BF20DE /* MainVCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6DC72D2BB0CA2A00BF20DE /* MainVCViewModel.swift */; };
 		6F6DC7322BB0D0C600BF20DE /* MoreDatailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6DC7312BB0D0C600BF20DE /* MoreDatailsViewModel.swift */; };
 		6F6DC7342BB0D84B00BF20DE /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6DC7332BB0D84B00BF20DE /* Service.swift */; };
@@ -33,7 +32,6 @@
 		6F6DC71F2BB0ACAF00BF20DE /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		6F6DC7232BB0B15100BF20DE /* MoreDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreDetailsViewController.swift; sourceTree = "<group>"; };
 		6F6DC7262BB0B36900BF20DE /* PositionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionModel.swift; sourceTree = "<group>"; };
-		6F6DC72B2BB0B93600BF20DE /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		6F6DC72D2BB0CA2A00BF20DE /* MainVCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVCViewModel.swift; sourceTree = "<group>"; };
 		6F6DC7312BB0D0C600BF20DE /* MoreDatailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreDatailsViewModel.swift; sourceTree = "<group>"; };
 		6F6DC7332BB0D84B00BF20DE /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
@@ -91,7 +89,6 @@
 				6F6DC70F2BB0A8B500BF20DE /* MainViewController.swift */,
 				6F6DC72D2BB0CA2A00BF20DE /* MainVCViewModel.swift */,
 				6F6DC71F2BB0ACAF00BF20DE /* TableViewCell.swift */,
-				6F6DC72B2BB0B93600BF20DE /* Router.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -214,7 +211,6 @@
 				6F6DC72E2BB0CA2A00BF20DE /* MainVCViewModel.swift in Sources */,
 				6F6DC7242BB0B15100BF20DE /* MoreDetailsViewController.swift in Sources */,
 				6F6DC7342BB0D84B00BF20DE /* Service.swift in Sources */,
-				6F6DC72C2BB0B93600BF20DE /* Router.swift in Sources */,
 				6F6DC7202BB0ACAF00BF20DE /* TableViewCell.swift in Sources */,
 				6F6DC7392BB0EB8A00BF20DE /* LoadingScreenViewController.swift in Sources */,
 			);

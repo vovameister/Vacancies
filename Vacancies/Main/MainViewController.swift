@@ -58,13 +58,13 @@ class MainViewController: UIViewController {
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel?.positions?.count ?? 0
+        return viewModel?.positions.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MainCell", for: indexPath) as! TableViewCellMain
         
-        let position = viewModel?.positions?[indexPath.row]
+        let position = viewModel?.positions[indexPath.row]
         
         if let imageUrl = URL(string: position?.image ?? "") {
             cell.jobImageView.kf.setImage(with: imageUrl)
@@ -82,6 +82,10 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        viewModel?.routeToDetails(indexPath: indexPath)
+        let detailsViewController = MoreDetailsViewController()
+        if let position = viewModel?.positions[indexPath.row] {
+            detailsViewController.viewModel = MoreDetailsViewControllerViewModel(position: position)
+        }
+        self.navigationController?.pushViewController(detailsViewController, animated: true)
     }
 }
