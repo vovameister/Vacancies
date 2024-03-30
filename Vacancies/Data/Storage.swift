@@ -9,8 +9,7 @@ import Foundation
 
 final class Storage {
     static let shared = Storage()
-    
-    private let service = Service.shared
+    private let service = Service()
     
     var positions: [Position] = []
     
@@ -23,6 +22,7 @@ final class Storage {
             }
             if let positions = positions {
                 self.positions = positions
+                print(positions)
                 completion(positions, nil)
             }
         }

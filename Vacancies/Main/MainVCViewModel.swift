@@ -7,23 +7,23 @@
 import Foundation
 
 protocol MainViewModelProtocol {
-    var positions: [MainPosition]? { get }
+    var positions: [Position]? { get }
+    func routeToDetails(indexPath: IndexPath)
 }
 
 class MainViewModel: MainViewModelProtocol {
     private let storage = Storage.shared
-    private weak var view: ViewController?
+    private let router = Router()
+    private weak var view: MainViewController?
     
-    var positions: [MainPosition]?
+    var positions: [Position]?
     
-    init(view: ViewController) {
+    init(view: MainViewController) {
         self.view = view
-        updatePositions()
+        self.positions = storage.positions
     }
     
-    private func updatePositions() {
-        self.positions = storage.positions.map { Position in
-            return MainPosition(image: Position.image, title: Position.title, salary: Position.salary)
-        }
+    func routeToDetails(indexPath: IndexPath) {
+        router.navigateToMoreDetailsViewController(position: storage.positions[indexPath.row])
     }
 }

@@ -7,13 +7,12 @@
 import UIKit
 import Kingfisher
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
     
     private let tableView = UITableView()
     private let titleLabel = UILabel()
     
     private var viewModel: MainViewModelProtocol?
-    private var positions: [MainPosition]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +20,7 @@ class ViewController: UIViewController {
         
         setUpView()
         setUpConstraint()
-        updateTableView()
+        tableView.reloadData()
     }
     
     func setUpView() {
@@ -46,31 +45,26 @@ class ViewController: UIViewController {
     
     func setUpConstraint() {
         NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 100),
+            titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 30),
+            
+            tableView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -200),
-            
-            titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 30)
+            tableView.heightAnchor.constraint(equalToConstant: 400)
         ])
-    }
-    
-    func updateTableView() {
-        positions = viewModel?.positions
-        tableView.reloadData()
     }
 }
 
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return positions?.count ?? 0
+        return viewModel?.positions?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MainCell", for: indexPath) as! TableViewCellMain
         
-        let position = positions?[indexPath.row]
+        let position = viewModel?.positions?[indexPath.row]
         
         if let imageUrl = URL(string: position?.image ?? "") {
             cell.jobImageView.kf.setImage(with: imageUrl)
@@ -88,6 +82,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        Router.navigateToMoreDetailsViewController(from: self, with: indexPath)
+        viewModel?.routeToDetails(indexPath: indexPath)
     }
 }

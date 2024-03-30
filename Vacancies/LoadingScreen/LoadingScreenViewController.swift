@@ -39,7 +39,7 @@ final class LoadingScreenViewController: UIViewController {
             }
             if positions != nil {
                 DispatchQueue.main.async {
-                    let controller = ViewController()
+                    let controller = MainViewController()
                     let navigationController = UINavigationController(rootViewController: controller)
                     let appDelegate = UIApplication.shared.delegate as! AppDelegate
                     appDelegate.window?.rootViewController = navigationController

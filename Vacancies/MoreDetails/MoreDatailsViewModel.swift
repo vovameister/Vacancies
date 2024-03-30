@@ -8,20 +8,9 @@
 import Foundation
 
 class MoreDetailsViewControllerViewModel {
-    weak var view: MoreDetailsViewControllerProtocol?
-    private var storage = Storage.shared
+    var position: Position
     
-    var indexPath: IndexPath?
-    var positions: [Position]? {
-        didSet {
-            setDetails()
-        }
-    }
-    
-    
-    func setDetails() {
-        if let indexPath = indexPath, let position = positions?[indexPath.row] {
-            view?.displayPositionDetails(position)
-        }
+    init(position: Position) {
+        self.position = position
     }
 }

@@ -8,8 +8,6 @@
 import Foundation
 
 final class Service {
-    static let shared = Service()
-    
     func fetchPositions(completion: @escaping ([Position]?, Error?) -> Void) {
         let urlString = "https://75fedc4afc8f45249a27302b8477f824.api.mockbin.io/"
         

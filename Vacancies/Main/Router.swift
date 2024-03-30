@@ -8,12 +8,30 @@
 import UIKit
 
 class Router {
-    static func navigateToMoreDetailsViewController(from viewController: UIViewController, with indexPath: IndexPath) {
+    
+    static var topMostViewController: UIViewController? {
+        var topController: UIViewController?
+        
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+            topController = windowScene.windows.first?.rootViewController
+            while let presentedViewController = topController?.presentedViewController {
+                topController = presentedViewController
+            }
+        }
+        
+        return topController
+    }
+    
+    func navigateToMoreDetailsViewController(position: Position) {
         let detailsViewController = MoreDetailsViewController()
-        let detailsViewModel = MoreDetailsViewControllerViewModel()
-        detailsViewModel.indexPath = indexPath
-        detailsViewModel.view = detailsViewController
-        viewController.navigationController?.pushViewController(detailsViewController, animated: true)
-        detailsViewModel.positions = Storage.shared.positions
+        let detailsViewModel = MoreDetailsViewControllerViewModel(position: position)
+        
+        if let navigationController = Router.topMostViewController?.navigationController {
+            navigationController.pushViewController(detailsViewController, animated: true)
+        } else {
+            print("No navigation controller found")
+        }
     }
 }
+
+

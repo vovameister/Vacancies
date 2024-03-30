@@ -8,16 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		6F6DC70C2BB0A8B500BF20DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6DC70B2BB0A8B500BF20DE /* AppDelegate.swift */; };
-		6F6DC7102BB0A8B500BF20DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6DC70F2BB0A8B500BF20DE /* ViewController.swift */; };
+		6F6DC7102BB0A8B500BF20DE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6DC70F2BB0A8B500BF20DE /* MainViewController.swift */; };
 		6F6DC7152BB0A8B700BF20DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F6DC7142BB0A8B700BF20DE /* Assets.xcassets */; };
 		6F6DC7182BB0A8B700BF20DE /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6F6DC7172BB0A8B700BF20DE /* Base */; };
-		6F6DC7202BB0ACAF00BF20DE /* tableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6DC71F2BB0ACAF00BF20DE /* tableViewCell.swift */; };
+		6F6DC7202BB0ACAF00BF20DE /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6DC71F2BB0ACAF00BF20DE /* TableViewCell.swift */; };
 		6F6DC7242BB0B15100BF20DE /* MoreDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6DC7232BB0B15100BF20DE /* MoreDetailsViewController.swift */; };
 		6F6DC7272BB0B36900BF20DE /* PositionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6DC7262BB0B36900BF20DE /* PositionModel.swift */; };
 		6F6DC72A2BB0B51B00BF20DE /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 6F6DC7292BB0B51B00BF20DE /* Kingfisher */; };
 		6F6DC72C2BB0B93600BF20DE /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6DC72B2BB0B93600BF20DE /* Router.swift */; };
 		6F6DC72E2BB0CA2A00BF20DE /* MainVCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6DC72D2BB0CA2A00BF20DE /* MainVCViewModel.swift */; };
-		6F6DC7302BB0CAC100BF20DE /* MainPositionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6DC72F2BB0CAC100BF20DE /* MainPositionModel.swift */; };
 		6F6DC7322BB0D0C600BF20DE /* MoreDatailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6DC7312BB0D0C600BF20DE /* MoreDatailsViewModel.swift */; };
 		6F6DC7342BB0D84B00BF20DE /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6DC7332BB0D84B00BF20DE /* Service.swift */; };
 		6F6DC7362BB0D9AC00BF20DE /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6DC7352BB0D9AC00BF20DE /* Storage.swift */; };
@@ -27,16 +26,15 @@
 /* Begin PBXFileReference section */
 		6F6DC7082BB0A8B500BF20DE /* Vacancies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vacancies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F6DC70B2BB0A8B500BF20DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6F6DC70F2BB0A8B500BF20DE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6F6DC70F2BB0A8B500BF20DE /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		6F6DC7142BB0A8B700BF20DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6F6DC7172BB0A8B700BF20DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6F6DC7192BB0A8B700BF20DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6F6DC71F2BB0ACAF00BF20DE /* tableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableViewCell.swift; sourceTree = "<group>"; };
+		6F6DC71F2BB0ACAF00BF20DE /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		6F6DC7232BB0B15100BF20DE /* MoreDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreDetailsViewController.swift; sourceTree = "<group>"; };
 		6F6DC7262BB0B36900BF20DE /* PositionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionModel.swift; sourceTree = "<group>"; };
 		6F6DC72B2BB0B93600BF20DE /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		6F6DC72D2BB0CA2A00BF20DE /* MainVCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVCViewModel.swift; sourceTree = "<group>"; };
-		6F6DC72F2BB0CAC100BF20DE /* MainPositionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPositionModel.swift; sourceTree = "<group>"; };
 		6F6DC7312BB0D0C600BF20DE /* MoreDatailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreDatailsViewModel.swift; sourceTree = "<group>"; };
 		6F6DC7332BB0D84B00BF20DE /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		6F6DC7352BB0D9AC00BF20DE /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
@@ -90,9 +88,9 @@
 		6F6DC7212BB0B10C00BF20DE /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				6F6DC70F2BB0A8B500BF20DE /* ViewController.swift */,
+				6F6DC70F2BB0A8B500BF20DE /* MainViewController.swift */,
 				6F6DC72D2BB0CA2A00BF20DE /* MainVCViewModel.swift */,
-				6F6DC71F2BB0ACAF00BF20DE /* tableViewCell.swift */,
+				6F6DC71F2BB0ACAF00BF20DE /* TableViewCell.swift */,
 				6F6DC72B2BB0B93600BF20DE /* Router.swift */,
 			);
 			path = Main;
@@ -111,7 +109,6 @@
 			isa = PBXGroup;
 			children = (
 				6F6DC7262BB0B36900BF20DE /* PositionModel.swift */,
-				6F6DC72F2BB0CAC100BF20DE /* MainPositionModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -211,15 +208,14 @@
 			files = (
 				6F6DC7322BB0D0C600BF20DE /* MoreDatailsViewModel.swift in Sources */,
 				6F6DC7362BB0D9AC00BF20DE /* Storage.swift in Sources */,
-				6F6DC7102BB0A8B500BF20DE /* ViewController.swift in Sources */,
+				6F6DC7102BB0A8B500BF20DE /* MainViewController.swift in Sources */,
 				6F6DC70C2BB0A8B500BF20DE /* AppDelegate.swift in Sources */,
 				6F6DC7272BB0B36900BF20DE /* PositionModel.swift in Sources */,
 				6F6DC72E2BB0CA2A00BF20DE /* MainVCViewModel.swift in Sources */,
 				6F6DC7242BB0B15100BF20DE /* MoreDetailsViewController.swift in Sources */,
-				6F6DC7302BB0CAC100BF20DE /* MainPositionModel.swift in Sources */,
 				6F6DC7342BB0D84B00BF20DE /* Service.swift in Sources */,
 				6F6DC72C2BB0B93600BF20DE /* Router.swift in Sources */,
-				6F6DC7202BB0ACAF00BF20DE /* tableViewCell.swift in Sources */,
+				6F6DC7202BB0ACAF00BF20DE /* TableViewCell.swift in Sources */,
 				6F6DC7392BB0EB8A00BF20DE /* LoadingScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
